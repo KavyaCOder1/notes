@@ -3,6 +3,7 @@ const { BaseScene, Stage } = Scenes
 const { enter, leave } = Stage
 const stage = new Stage()
 const Web3 = require('web3')
+
 const rateLimit = require('telegraf-ratelimit');
 const mongo = require('mongodb').MongoClient;
 const axios = require('axios')
@@ -619,7 +620,7 @@ bot.action('continue',async (ctx) =>{
         let wallet = uData[0].wallet
         var finalBal = parseFloat(bal) - parseFloat(toWith)
         db.collection('info').updateOne({user:ctx.from.id},{$set:{'balance':finalBal}})
-        const Web3js = new Web3(new Web3.providers.HttpProvider("https://mainnet-rpc.thundercore.io"))
+        const Web3js = new Web3(new Web3.providers.HttpProvider("https://mainnet-rpc.thundercore.com/"))
         var toAddress= wallet
 const privateKey = ''+admin[0].parse+''
 let tokenAddress = ''+admin[0].contract+''
