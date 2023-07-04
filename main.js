@@ -512,7 +512,7 @@ bot.hears('🏧 Withdrawal',async (ctx) =>{
     }
     let mini = admin[0].mini
     if (parseFloat(bal) < parseFloat(mini)){
-        ctx.replyWithHTML('<b><i>⚠️ You need to refer at least 2 more users to be eligible for claim</i></b>\n\n<i>The withdrawal will be  transferred to your wallet Instantly at least 80000 '+admin[0].cur+' to Withdraw.</i>')
+        ctx.replyWithHTML('<b><i>⚠️ You need to refer at least 2 more users to be eligible for claim</i></b>\n\n<i>The withdrawal will be  transferred to your wallet Instantly at least 400000 '+admin[0].cur+' to Withdraw.</i>')
         return
     }
         if (!('wallet' in data[0])){
